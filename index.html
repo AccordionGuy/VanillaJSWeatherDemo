@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Weather!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+
+    <section class="title-banner">
+      <h1 class="title">Weather!</h1>
+    </section>
+
+    <section class="city-form">
+      <input id="city" type="text" placeholder="Enter a city" autofocus>
+      <button id="getWeatherButton" type="button" onclick="getOpenWeatherMapWeather()">Get the weather</button>
+    </section>
+
+    <p id="error_message"></p>
+
+    <div id="container">
+      <div class="location_box">
+        <div id="location"></div>
+      </div>
+
+      <div class="icon_box">
+        <img id="weather_icon" width="100" height="100" />
+        <div id="description"></div>
+      </div>
+        
+      <div class="forecast_box">
+        <div id="current_temp"></div>
+        <div class="forecast_item">Feels like: <span id="feels_like" class="value"></span></div>
+        <div class="forecast_item">
+          Wind: <span id="wind" class="value"></span> 
+          (<a href="https://www.spc.noaa.gov/faq/tornado/beaufort.html"><span id="wind_description" class="value"></span></a>)
+        </div>
+        <div class="forecast_item">Humidity: <span id="humidity" class="value"></div>
+      </div>
+
+    </div>
+
+    <footer>
+      Want to learn how to build a weather app for the iPhone? Check out this five-part series on Global Nerdy:<br />
+      <a href="http://www.globalnerdy.com/2016/04/02/how-to-build-an-ios-weather-app-in-swift-part-1-a-very-bare-bones-weather-app/">Part one</a> |
+      <a href="http://www.globalnerdy.com/2016/04/11/how-to-build-an-ios-weather-app-in-swift-part-2-a-little-more-explanation-and-turning-openweathermaps-json-into-a-swift-dictionary/">Part two</a> |
+      <a href="http://www.globalnerdy.com/2016/05/08/how-to-build-an-ios-weather-app-in-swift-part-3-giving-the-app-a-user-interface/">Part three</a> |
+      <a href="http://www.globalnerdy.com/2016/05/12/how-to-build-an-ios-weather-app-in-swift-part-4-introducing-geolocation/">Part four</a> |
+      <a href="http://www.globalnerdy.com/2016/05/16/how-to-build-an-ios-weather-app-in-swift-part-5-putting-it-all-together/">Part five</a> 
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
